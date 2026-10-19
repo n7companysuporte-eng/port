@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>N7 Company | Marketing que gera crescimento</title>
+
+<meta name="description"
+content="N7 Company — Estratégia, Social Media, Design e Tráfego Pago para empresas que querem crescer.">
+
+<style>
+
+:root{
+    --black:#050607;
+    --black2:#0b0d0f;
+    --card:#101317;
+    --white:#ffffff;
+    --gray:#9ca3aa;
+    --red:#e5091a;
+    --red2:#ff2738;
+    --border:rgba(255,255,255,.09);
+    --max:1180px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--black);
+    color:white;
+    font-family:Arial,Helvetica,sans-serif;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.container{
+    width:min(var(--max),calc(100% - 40px));
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1000;
+    background:rgba(5,6,7,.82);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--border);
+}
+
+.nav{
+    height:76px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:900;
+    letter-spacing:-2px;
+}
+
+.logo span{
+    color:var(--red);
+}
+
+.logo small{
+    color:#888;
+    font-size:8px;
+    letter-spacing:3px;
+    margin-left:5px;
+}
+
+nav{
+    display:flex;
+    gap:28px;
+    font-size:13px;
+    color:#bfc4ca;
+}
+
+nav a{
+    transition:.2s;
+}
+
+nav a:hover{
+    color:white;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:15px 23px;
+    border-radius:50px;
+    background:var(--red);
+    color:white;
+    font-size:13px;
+    font-weight:800;
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(229,9,26,.25);
+}
+
+.btn-outline{
+    background:transparent;
+    border:1px solid rgba(255,255,255,.18);
+}
+
+/* HERO */
+
+.hero{
+    min-height:850px;
+    padding-top:140px;
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    align-items:center;
+    gap:50px;
+    position:relative;
+}
+
+.hero:before{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    background:rgba(229,9,26,.12);
+    filter:blur(140px);
+    right:-300px;
+    top:100px;
+    pointer-events:none;
+}
+
+.eyebrow{
+    color:var(--red2);
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.hero h1{
+    font-size:clamp(50px,7vw,88px);
+    line-height:.92;
+    letter-spacing:-5px;
+    margin:20px 0 25px;
+}
+
+.hero h1 span{
+    color:var(--red);
+}
+
+.hero p{
+    color:#aeb4bb;
+    max-width:570px;
+    font-size:17px;
+    line-height:1.7;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    margin-top:32px;
+    flex-wrap:wrap;
+}
+
+.stats{
+    display:flex;
+    gap:35px;
+    margin-top:45px;
+    flex-wrap:wrap;
+}
+
+.stat strong{
+    display:block;
+    font-size:28px;
+}
+
+.stat span{
+    color:#777e86;
+    font-size:11px;
+}
+
+.hero-image{
+    height:580px;
+    border-radius:28px;
+    overflow:hidden;
+    border:1px solid var(--border);
+    position:relative;
+    box-shadow:0 30px 100px rgba(0,0,0,.6);
+}
+
+.hero-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-image:after{
+    content:"";
+    position:absolute;
+    inset:40% 0 0;
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.92)
+    );
+}
+
+.hero-label{
+    position:absolute;
+    z-index:2;
+    bottom:35px;
+    left:35px;
+}
+
+.hero-label strong{
+    display:block;
+    font-size:27px;
+}
+
+.hero-label span{
+    color:#bbb;
+    font-size:12px;
+}
+
+/* SECTIONS */
+
+section{
+    padding:110px 0;
+    border-top:1px solid var(--border);
+}
+
+.section-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:40px;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:clamp(38px,5vw,62px);
+    line-height:.95;
+    letter-spacing:-3px;
+    margin-top:12px;
+}
+
+.section-title h2 span{
+    color:var(--red);
+}
+
+.section-title p{
+    max-width:420px;
+    color:#8f969d;
+    font-size:14px;
+    line-height:1.7;
+}
+
+/* SOBRE */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.about-image{
+    height:470px;
+    border-radius:25px;
+    overflow:hidden;
+    border:1px solid var(--border);
+}
+
+.about-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.about-text p{
+    color:#aab0b6;
+    line-height:1.8;
+    margin-top:25px;
+}
+
+.about-list{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin-top:30px;
+}
+
+.about-item{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:15px;
+    padding:20px;
+}
+
+.about-item strong{
+    font-size:13px;
+    display:block;
+    margin-bottom:7px;
+}
+
+.about-item span{
+    font-size:11px;
+    color:#777f87;
+}
+
+/* SERVIÇOS */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.service{
+    padding:30px;
+    min-height:210px;
+    border:1px solid var(--border);
+    border-radius:20px;
+    background:linear-gradient(145deg,#111419,#090b0d);
+    transition:.3s;
+}
+
+.service:hover{
+    transform:translateY(-6px);
+    border-color:rgba(229,9,26,.45);
+}
+
+.service-number{
+    color:var(--red);
+    font-weight:900;
+    font-size:12px;
+}
+
+.service h3{
+    font-size:21px;
+    margin:35px 0 10px;
+}
+
+.service p{
+    color:#7f8790;
+    font-size:12px;
+    line-height:1.7;
+}
+
+/* PORTFÓLIO */
+
+.portfolio{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+}
+
+.project{
+    aspect-ratio:4/5;
+    border-radius:20px;
+    overflow:hidden;
+    position:relative;
+    border:1px solid var(--border);
+    background:#111;
+}
+
+.project img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.project:hover img{
+    transform:scale(1.07);
+}
+
+.project:after{
+    content:"";
+    position:absolute;
+    inset:35% 0 0;
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.95)
+    );
+}
+
+.project-info{
+    position:absolute;
+    z-index:2;
+    bottom:20px;
+    left:20px;
+    right:20px;
+}
+
+.project-info small{
+    color:var(--red2);
+    font-size:9px;
+    font-weight:900;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.project-info h3{
+    font-size:23px;
+    margin-top:5px;
+}
+
+.project-info p{
+    color:#aaa;
+    font-size:11px;
+    margin-top:4px;
+}
+
+/* RESULTADOS */
+
+.results{
+    background:
+    radial-gradient(
+        circle at 85% 50%,
+        rgba(229,9,26,.17),
+        transparent 40%
+    ),
+    #0a0c0e;
+}
+
+.results-grid{
+    display:grid;
+    grid-template-columns:1fr 1.5fr;
+    gap:70px;
+    align-items:center;
+}
+
+.results-text p{
+    color:#969da5;
+    line-height:1.8;
+    margin:25px 0 30px;
+}
+
+.numbers{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    border:1px solid var(--border);
+    border-radius:20px;
+    overflow:hidden;
+    gap:1px;
+    background:var(--border);
+}
+
+.number{
+    padding:38px;
+    background:var(--card);
+}
+
+.number strong{
+    display:block;
+    font-size:43px;
+}
+
+.number span{
+    color:#777f87;
+    font-size:11px;
+}
+
+/* CASES */
+
+.cases{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.case{
+    padding:28px;
+    border:1px solid var(--border);
+    border-radius:18px;
+    background:var(--card);
+}
+
+.case p{
+    color:#b9bec4;
+    font-size:13px;
+    line-height:1.7;
+}
+
+.case strong{
+    display:block;
+    margin-top:25px;
+    font-size:12px;
+}
+
+.case span{
+    color:#737a82;
+    font-size:10px;
+}
+
+/* CTA */
+
+.cta{
+    padding:80px 0 120px;
+}
+
+.cta-box{
+    border:1px solid rgba(229,9,26,.35);
+    border-radius:28px;
+    padding:65px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+    background:
+    radial-gradient(
+        circle at 90% 50%,
+        rgba(229,9,26,.17),
+        transparent 40%
+    ),
+    #0c0f12;
+}
+
+.cta-box h2{
+    font-size:clamp(38px,5vw,62px);
+    line-height:.95;
+    letter-spacing:-3px;
+    margin-top:12px;
+}
+
+.cta-box h2 span{
+    color:var(--red);
+}
+
+.cta-box p{
+    color:#9299a1;
+    max-width:550px;
+    margin-top:20px;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid var(--border);
+    padding:35px 0;
+    color:#707780;
+    font-size:11px;
+}
+
+.footer{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+        padding-top:125px;
+    }
+
+    .hero-image{
+        height:500px;
+    }
+
+    .about,
+    .results-grid{
+        grid-template-columns:1fr;
+    }
+
+    .services,
+    .portfolio,
+    .cases{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .container{
+        width:calc(100% - 28px);
+    }
+
+    section{
+        padding:75px 0;
+    }
+
+    .hero h1{
+        letter-spacing:-3px;
+    }
+
+    .hero-image{
+        height:430px;
+    }
+
+    .section-title{
+        display:block;
+    }
+
+    .section-title p{
+        margin-top:20px;
+    }
+
+    .services,
+    .portfolio,
+    .cases,
+    .about-list{
+        grid-template-columns:1fr;
+    }
+
+    .numbers{
+        grid-template-columns:1fr;
+    }
+
+    .cta-box{
+        padding:40px 25px;
+        display:block;
+    }
+
+    .cta-box .btn{
+        margin-top:30px;
+    }
+
+    .footer{
+        display:block;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="container nav">
+
+<a href="#" class="logo">
+N<span>7</span><small>COMPANY</small>
+</a>
+
+<nav>
+<a href="#sobre">Sobre</a>
+<a href="#servicos">Serviços</a>
+<a href="#portfolio">Portfólio</a>
+<a href="#resultados">Resultados</a>
+<a href="#contato">Contato</a>
+</nav>
+
+<a href="#contato" class="btn">
+Quero crescer →
+</a>
+
+</div>
+
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero container">
+
+<div>
+
+<div class="eyebrow">
+N7 COMPANY • MARKETING
+</div>
+
+<h1>
+Sua marca pode
+<br>
+ser muito mais
+<br>
+<span>forte.</span>
+</h1>
+
+<p>
+Estratégia, conteúdo, design e tráfego pago
+para empresas que querem parar de apenas
+aparecer e começar a gerar oportunidades.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#contato" class="btn">
+Quero fazer minha empresa crescer →
+</a>
+
+<a href="#portfolio" class="btn btn-outline">
+Ver portfólio
+</a>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<strong>+4</strong>
+<span>anos de mercado</span>
+</div>
+
+<div class="stat">
+<strong>+700</strong>
+<span>projetos e clientes</span>
+</div>
+
+<div class="stat">
+<strong>360°</strong>
+<span>visão de marketing</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="hero-image">
+
+<img
+src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85"
+alt="Equipe trabalhando em estratégia de marketing">
+
+<div class="hero-label">
+
+<strong>Projetos reais.</strong>
+
+<span>
+Estratégia pensada para cada negócio.
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SOBRE -->
+
+<section id="sobre">
+
+<div class="container about">
+
+<div class="about-text">
+
+<div class="eyebrow">
+SOBRE A N7
+</div>
+
+<h2>
+Marketing com
+<span>propósito.</span>
+</h2>
+
+<p>
+A N7 Company nasceu para ajudar empresas a
+transformarem sua presença digital em uma
+ferramenta real de crescimento.
+
+Não se trata apenas de postar.
+
+É entender o negócio, posicionar a marca,
+atrair o público certo e criar uma comunicação
+que gere percepção de valor e oportunidades.
+</p>
+
+<div class="about-list">
+
+<div class="about-item">
+<strong>Estratégia</strong>
+<span>Planejamento antes de publicar.</span>
+</div>
+
+<div class="about-item">
+<strong>Performance</strong>
+<span>Tráfego com objetivo.</span>
+</div>
+
+<div class="about-item">
+<strong>Conversão</strong>
+<span>Conteúdo pensado para ação.</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="about-image">
+
+<img
+src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=85"
+alt="Equipe de marketing">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVIÇOS -->
+
+<section id="servicos">
+
+<div class="container">
+
+<div class="section-title">
+
+<div>
+
+<div class="eyebrow">
+O QUE FAZEMOS
+</div>
+
+<h2>
+Uma operação completa
+<span>para crescer.</span>
+</h2>
+
+</div>
+
+<p>
+Tudo que sua empresa precisa para construir
+uma presença digital profissional e transformar
+atenção em oportunidades.
+</p>
+
+</div>
+
+
+<div class="services">
+
+<div class="service">
+<div class="service-number">01</div>
+<h3>Social Media</h3>
+<p>
+Planejamento, conteúdo, calendário editorial,
+design e posicionamento da marca.
+</p>
+</div>
+
+<div class="service">
+<div class="service-number">02</div>
+<h3>Tráfego Pago</h3>
+<p>
+Campanhas estratégicas para alcançar pessoas
+com potencial real de compra.
+</p>
+</div>
+
+<div class="service">
+<div class="service-number">03</div>
+<h3>Design</h3>
+<p>
+Criativos profissionais e identidade visual
+que aumentam a percepção de valor.
+</p>
+</div>
+
+<div class="service">
+<div class="service-number">04</div>
+<h3>Vídeos & Reels</h3>
+<p>
+Conteúdo audiovisual pensado para prender
+atenção e gerar autoridade.
+</p>
+</div>
+
+<div class="service">
+<div class="service-number">05</div>
+<h3>Planejamento</h3>
+<p>
+Estratégias personalizadas de acordo com
+o momento e objetivo da empresa.
+</p>
+</div>
+
+<div class="service">
+<div class="service-number">06</div>
+<h3>Consultoria</h3>
+<p>
+Orientação estratégica para decisões mais
+rápidas e inteligentes.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PORTFÓLIO -->
+
+<section id="portfolio">
+
+<div class="container">
+
+<div class="section-title">
+
+<div>
+
+<div class="eyebrow">
+PROJETOS REAIS
+</div>
+
+<h2>
+Marcas que já passaram
+<span>pela N7.</span>
+</h2>
+
+</div>
+
+<p>
+Uma seleção de trabalhos desenvolvidos
+para diferentes segmentos e objetivos.
+</p>
+
+</div>
+
+
+<div class="portfolio">
+
+
+<div class="project">
+
+<img
+src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85"
+alt="Projeto de confeitaria">
+
+<div class="project-info">
+
+<small>Alimentação</small>
+
+<h3>Très Amores</h3>
+
+<p>
+Conteúdo + posicionamento visual
+</p>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<img
+src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=85"
+alt="Projeto educacional">
+
+<div class="project-info">
+
+<small>Educação</small>
+
+<h3>Definitiva Idiomas</h3>
+
+<p>
+Social Media + campanhas
+</p>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<img
+src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=85"
+alt="Projeto odontológico">
+
+<div class="project-info">
+
+<small>Odontologia</small>
+
+<h3>Pratique Mais Sorrisos</h3>
+
+<p>
+Conteúdo + comunicação comercial
+</p>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<img
+src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85"
+alt="Projeto imobiliário">
+
+<div class="project-info">
+
+<small>Imobiliário</small>
+
+<h3>Almeida Imóveis</h3>
+
+<p>
+Posicionamento + conteúdo
+</p>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<img
+src="https://images.unsplash.com/photo-1601924928376-1a7d1c52f6f5?auto=format&fit=crop&w=900&q=85"
+alt="Projeto gastronômico">
+
+<div class="project-info">
+
+<small>Gastronomia</small>
+
+<h3>Uai Burguer</h3>
+
+<p>
+Social Media + campanhas
+</p>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<img
+src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85"
+alt="Projeto gastronômico">
+
+<div class="project-info">
+
+<small>Gastronomia</small>
+
+<h3>Troppo Pizzas</h3>
+
+<p>
+Conteúdo + identidade visual
+</p>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<img
+src="https://images.unsplash.com/photo-1561218800-2e2c6b6b6b9f?auto=format&fit=crop&w=900&q=85"
+alt="Projeto de engenharia">
+
+<div class="project-info">
+
+<small>Engenharia</small>
+
+<h3>Inova Engenharia</h3>
+
+<p>
+Autoridade + presença digital
+</p>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<img
+src="https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=900&q=85"
+alt="Projeto gastronômico">
+
+<div class="project-info">
+
+<small>Alimentação</small>
+
+<h3>Pamonharia da D'ona</h3>
+
+<p>
+Conteúdo + vendas
+</p>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<img
+src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=900&q=85"
+alt="Projeto empresarial">
+
+<div class="project-info">
+
+<small>Serviços</small>
+
+<h3>ProLaudos</h3>
+
+<p>
+Marketing + geração de oportunidades
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RESULTADOS -->
+
+<section id="resultados" class="results">
+
+<div class="container results-grid">
+
+<div class="results-text">
+
+<div class="eyebrow">
+RESULTADO
+</div>
+
+<h2>
+Não é sobre
+<br>
+<span>postar.</span>
+</h2>
+
+<p>
+É sobre fazer a sua empresa ser encontrada,
+lembrada, desejada e escolhida.
+
+Cada projeto começa entendendo o negócio
+e termina buscando impacto comercial.
+</p>
+
+<a href="#contato" class="btn">
+Quero um diagnóstico →
+</a>
+
+</div>
+
+
+<div class="numbers">
+
+<div class="number">
+<strong>+700</strong>
+<span>clientes e projetos</span>
+</div>
+
+<div class="number">
+<strong>+4 anos</strong>
+<span>de experiência</span>
+</div>
+
+<div class="number">
+<strong>360°</strong>
+<span>estratégia completa</span>
+</div>
+
+<div class="number">
+<strong>100%</strong>
+<span>personalização</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROVA SOCIAL -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<div>
+
+<div class="eyebrow">
+EXPERIÊNCIA N7
+</div>
+
+<h2>
+Quem trabalha com a N7,
+<span>percebe.</span>
+</h2>
+
+</div>
+
+</div>
+
+
+<div class="cases">
+
+
+<div class="case">
+
+<p>
+“Precisávamos profissionalizar nossa presença
+digital e a N7 conseguiu transformar nossa
+comunicação.”
+</p>
+
+<strong>Cliente N7</strong>
+
+<span>
+Social Media + Estratégia
+</span>
+
+</div>
+
+
+<div class="case">
+
+<p>
+“O diferencial foi entender nosso negócio antes
+de simplesmente começar a produzir conteúdo.”
+</p>
+
+<strong>Cliente N7</strong>
+
+<span>
+Marketing + Posicionamento
+</span>
+
+</div>
+
+
+<div class="case">
+
+<p>
+“Hoje nossa empresa transmite muito mais valor
+e conseguimos mostrar melhor aquilo que fazemos.”
+</p>
+
+<strong>Cliente N7</strong>
+
+<span>
+Design + Conteúdo
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section id="contato" class="cta">
+
+<div class="container">
+
+<div class="cta-box">
+
+<div>
+
+<div class="eyebrow">
+VAMOS CONVERSAR?
+</div>
+
+<h2>
+Sua empresa está pronta
+<br>
+para <span>crescer?</span>
+</h2>
+
+<p>
+Fale com a N7 Company e descubra como
+podemos estruturar sua presença digital,
+fortalecer sua marca e gerar novas oportunidades.
+</p>
+
+</div>
+
+
+<a
+href="https://wa.me/5562999999999?text=Olá%20N7%20Company!%20Quero%20conhecer%20o%20trabalho%20de%20vocês."
+target="_blank"
+class="btn">
+
+Falar com a N7 →
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<div class="container footer">
+
+<div>
+
+<div class="logo">
+N<span>7</span><small>COMPANY</small>
+</div>
+
+<br>
+
+Estratégia que gera crescimento.
+
+</div>
+
+<div>
+© 2026 N7 Company
+</div>
+
+</div>
+
+</footer>
+
+
+<script>
+
+/* ANIMAÇÃO SIMPLES AO ENTRAR NA TELA */
+
+const elementos = document.querySelectorAll(
+'.service,.project,.case,.number'
+);
+
+const observer = new IntersectionObserver(
+(entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.style.opacity='1';
+entry.target.style.transform='translateY(0)';
+}
+});
+},
+{threshold:.1}
+);
+
+elementos.forEach(el=>{
+el.style.opacity='0';
+el.style.transform='translateY(25px)';
+el.style.transition='opacity .6s ease, transform .6s ease';
+observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
